@@ -4,7 +4,7 @@
             <form>
                 <input class="form-control form-control-lg" type="text" #quoteInput placeholder="Add your quote here..." aria-label="default input example">
                 <div class="add-btn d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button (click)="addQuote(quoteInput.value)" type="button" class="btn btn-success">Add Quote</button>
+                    <button (click)="addQuote(quoteInput.value); quoteInput.value=''" type="button" class="btn btn-success">Add Quote</button>
                 </div>
                 <ul *ngFor="let quoteInput of quoteList" class="list-group list-group-flush">
                     <li class="list-group-item">{{quoteInput.name}}
