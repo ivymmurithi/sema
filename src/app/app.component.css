@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 .header-image img {
@@ -10,4 +11,7 @@
   object-fit: cover;
 }
 
-
+.heading {
+  margin-top: 2%;
+  font-family: "Playfair Display", serif;
+}
