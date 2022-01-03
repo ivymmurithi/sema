@@ -4,22 +4,22 @@
             <form>
                 <input class="form-control form-control-lg" type="text" #quoteInput placeholder="Add quote here..." aria-label="default input example">
                 <input class="form-control form-control-lg" type="text" #authorInput  placeholder="Author of the quote..." aria-label=".form-control-lg example">
-                <input class="form-control form-control-lg" type="text" placeholder="Your name..." aria-label=".form-control-lg example">
+                <input class="form-control form-control-lg" type="text" #usernameInput placeholder="Your name..." aria-label=".form-control-lg example">
 
                 <div class="add-btn d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button (click)="addQuote(quoteInput.value, authorInput.value); quoteInput.value=''" type="button" class="btn btn-success">Add Quote</button>
+                    <button (click)="addQuote(quoteInput.value, authorInput.value, usernameInput.value); quoteInput.value=''; authorInput.value=''; usernameInput.value=''" type="button" class="btn btn-success">Add Quote</button>
                 </div>
                 <ul *ngFor="let quoteInput of quoteList" class="list-group list-group-flush">
                     <li class="list-group-item">
                         <i (click)="deleteQuote(quoteInput.id)" class="fas fa-trash-alt delete-icon"></i>
                         <div class="card">
                             <div class="card-header">
-                              Quote
+                              {{quoteInput.username}}
                             </div>
                             <div class="card-body">
                               <blockquote class="blockquote mb-0">
                                 <p>{{quoteInput.name}}</p>
-                                <footer class="blockquote-footer"><cite title="Source Title">{{authorInput.value}}</cite></footer>
+                                <footer class="blockquote-footer"><cite title="Source Title">{{quoteInput.author}}</cite></footer>
                               </blockquote>
                             </div>
                         </div>                  
