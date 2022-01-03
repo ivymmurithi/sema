@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-quotes-body',
-  templateUrl: './quotes-body.component.html',
-  styleUrls: ['./quotes-body.component.css']
+  selector: 'app-input-form',
+  templateUrl: './input-form.component.html',
+  styleUrls: ['./input-form.component.css']
 })
-export class QuotesBodyComponent implements OnInit {
+export class InputFormComponent implements OnInit {
 
   quoteList: any[] = [];
   addQuote(quoteInput: any) {
