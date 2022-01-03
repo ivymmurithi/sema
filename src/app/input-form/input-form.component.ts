@@ -13,9 +13,9 @@ export class InputFormComponent implements OnInit {
     console.log(quoteInput);
   }
 
-  // deleteQuote(id: number) {
-  //   this.quoteList = this.quoteList.filter(quoteInput => quoteInput.id != id);
-  // }
+  deleteQuote(id: number) {
+    this.quoteList = this.quoteList.filter(quoteInput => quoteInput.id != id);
+  }
 
   constructor() { }
 
