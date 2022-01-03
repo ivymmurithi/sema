@@ -2,16 +2,27 @@
     <div class="card">
         <div class="card-body card border-success added-quotes">
             <form>
-                <input class="form-control form-control-lg" type="text" #quoteInput placeholder="Add your quote here..." aria-label="default input example">
-                <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
-                <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
+                <input class="form-control form-control-lg" type="text" #quoteInput placeholder="Add quote here..." aria-label="default input example">
+                <input class="form-control form-control-lg" type="text"  placeholder="Author of the quote..." aria-label=".form-control-lg example">
+                <input class="form-control form-control-lg" type="text" placeholder="Your name..." aria-label=".form-control-lg example">
 
                 <div class="add-btn d-grid gap-2 d-md-flex justify-content-md-end">
                     <button (click)="addQuote(quoteInput.value); quoteInput.value=''" type="button" class="btn btn-success">Add Quote</button>
                 </div>
                 <ul *ngFor="let quoteInput of quoteList" class="list-group list-group-flush">
                     <li class="list-group-item">{{quoteInput.name}}
-                        <i (click)="deleteQuote(quoteInput.id)" class="fas fa-trash-alt"></i>                    
+                        <i (click)="deleteQuote(quoteInput.id)" class="fas fa-trash-alt"></i>  
+                        <div class="card">
+                            <div class="card-header">
+                              Quote
+                            </div>
+                            <div class="card-body">
+                              <blockquote class="blockquote mb-0">
+                                <p>{{quoteInput.name}}</p>
+                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                              </blockquote>
+                            </div>
+                          </div>                  
                     </li>
                 </ul>
             </form>
