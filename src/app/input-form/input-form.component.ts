@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class InputFormComponent implements OnInit {
 
   quoteList: any[] = [];
-  addQuote(quoteInput: any) {
-    this.quoteList.push({id:this.quoteList.length, name:quoteInput});
+  addQuote(quoteInput: any, authorInput: any) {
+    this.quoteList.push({id:this.quoteList.length, name: quoteInput, authorInput})
+    console.log(quoteInput);
   }
-  deleteQuote(id: number) {
-    this.quoteList = this.quoteList.filter(quoteInput => quoteInput.id != id);
-  }
+
+  // deleteQuote(id: number) {
+  //   this.quoteList = this.quoteList.filter(quoteInput => quoteInput.id != id);
+  // }
 
   constructor() { }
 
