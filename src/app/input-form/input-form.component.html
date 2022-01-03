@@ -9,23 +9,30 @@
                 <div class="add-btn d-grid gap-2 d-md-flex justify-content-md-end">
                     <button (click)="addQuote(quoteInput.value, authorInput.value, usernameInput.value); quoteInput.value=''; authorInput.value=''; usernameInput.value=''" type="button" class="btn btn-success">Add Quote</button>
                 </div>
-                <ul *ngFor="let quoteInput of quoteList" class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <i (click)="deleteQuote(quoteInput.id)" class="fas fa-trash-alt delete-icon"></i>
-                        <div class="card">
-                            <div class="card-header">
-                              {{quoteInput.username}}
-                            </div>
-                            <div class="card-body">
-                              <blockquote class="blockquote mb-0">
-                                <p>{{quoteInput.name}}</p>
-                                <footer class="blockquote-footer"><cite title="Source Title">{{quoteInput.author}}</cite></footer>
-                              </blockquote>
-                            </div>
-                        </div>                  
-                    </li>
-                </ul>
             </form>
+            <!-- <div class="quotes-list"> -->
+              <ul *ngFor="let quoteInput of quoteList" class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <i (click)="deleteQuote(quoteInput.id)" class="fas fa-trash-alt delete-icon"></i>
+                    <div class="card">
+                        <div class="card-header">
+                          {{quoteInput.username}}
+                        </div>
+                        <div class="card-body">
+                          <blockquote class="blockquote mb-0">
+                            <p>{{quoteInput.name}}</p>
+                            <div class="votes">
+                            <i class="fas fa-caret-up fa-2x"></i>
+                            <span>0</span>
+                            <i class="fas fa-sort-down fa-2x"></i>
+                            </div>
+                            <footer class="blockquote-footer"><cite title="Source Title">{{quoteInput.author}}</cite></footer>
+                          </blockquote>
+                        </div>
+                    </div>                  
+                </li>
+            </ul>
+            <!-- </div> -->
         </div>
-      </div>
+    </div>
 </div>

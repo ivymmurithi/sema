@@ -5,3 +5,8 @@
 .delete-icon {
     cursor: pointer;
 }
+
+.votes, i {
+    float: right;
+    display: flex;
+}
