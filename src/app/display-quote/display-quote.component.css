@@ -1,0 +1,14 @@
+.add-btn {
+    margin-top: 3%;
+}
+
+.delete-icon {
+    cursor: pointer;
+    margin-top: 5%;
+    margin-left: 3%;
+}
+
+.votes, i {
+    float: right;
+    display: flex;
+}
