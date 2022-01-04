@@ -11,7 +11,7 @@
                 </div>
             </form>
               <ul *ngFor="let quoteInput of quoteList" class="list-group list-group-flush">
-                <app-display-quote [quoteInput]='quoteInput' ></app-display-quote>
+                <app-display-quote [quoteInput]='quoteInput'></app-display-quote>
                   <i (click)="deleteQuote(quoteInput.id)" class="fas fa-trash-alt fa-lg delete-icon"></i>
             </ul>
         </div>
