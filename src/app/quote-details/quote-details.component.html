@@ -1,6 +1,7 @@
 
 <div class="votes">
     <button class="btn btn-outline-success"><i (click)="addUpvote()"class="fas fa-caret-up fa-2x"></i></button>
-    <span>{{count}}</span>
-    <button class="btn btn-outline-success"><i class="fas fa-sort-down fa-2x"></i></button>
+    <span>{{upvoteCount}}</span>
+    <button class="btn btn-outline-success"><i (click)="addDownvote()" class="fas fa-sort-down fa-2x"></i></button>
+    <span>{{downvoteCount}}</span>
 </div>

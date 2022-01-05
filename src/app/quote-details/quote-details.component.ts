@@ -7,11 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class QuoteDetailsComponent implements OnInit {
 
-  count = 0;
+  upvoteCount = 0;
 
   addUpvote() {
-    this.count++;
-    console.log(this.count);
+    this.upvoteCount++;
+  }
+
+  downvoteCount = 0;
+
+  addDownvote() {
+    this.downvoteCount ++;
   }
 
   constructor() { }
