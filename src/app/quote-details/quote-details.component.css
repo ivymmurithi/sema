@@ -1,4 +1,5 @@
 .votes, i {
     float: right;
     display: flex;
+    cursor: pointer;
 }
