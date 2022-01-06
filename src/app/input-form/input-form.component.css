@@ -6,3 +6,10 @@
     float: right;
 }
 
+.form-control, input {
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 50%;
+    justify-items: center;
+    align-items: center;
+}

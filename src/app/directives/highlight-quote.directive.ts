@@ -12,7 +12,8 @@ export class HighlightQuoteDirective {
       if (upvoteCount <= 0) {
           this.viewContainer.createEmbeddedView(this.templateRef);
       } else {
-          this.viewContainer.clear(); }
+          this.viewContainer.clear();        
+        }
   }
 
 }

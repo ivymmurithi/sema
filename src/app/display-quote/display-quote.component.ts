@@ -11,7 +11,6 @@ export class DisplayQuoteComponent implements OnInit {
   @Input() quoteInput: any;
   dateCreated: Date = new Date();
 
-
   constructor() { }
 
   ngOnInit(): void {
