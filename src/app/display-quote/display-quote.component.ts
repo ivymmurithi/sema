@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -8,6 +9,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DisplayQuoteComponent implements OnInit {
 
   @Input() quoteInput: any;
+  dateCreated: Date = new Date();
+
 
   constructor() { }
 

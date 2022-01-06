@@ -10,6 +10,7 @@ export class InputFormComponent implements OnInit {
   public quoteList: any[] = [];
   addQuote(quoteInput: any, authorInput: any, usernameInput: any) {
     this.quoteList.push({id:this.quoteList.length, name: quoteInput, author: authorInput, username: usernameInput })
+    
     console.log(this.quoteList);
   }
 

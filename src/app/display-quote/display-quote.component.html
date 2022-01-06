@@ -1,23 +1,18 @@
 <div class="container-fluid">
     <li class="list-group-item mt-4">
-        <div class="card">
+        <div  class="card">
             <div class="card-header">
               Posted by: {{quoteInput.username}}
             </div>
             <div class="card-body">
               <blockquote class="blockquote mb-0">
                 <p>{{quoteInput.name}}</p>
-                <!-- <div class="votes"> -->
                   <app-quote-details></app-quote-details>
-                <!-- <i class="fas fa-caret-up fa-2x"></i>
-                <span>0</span>
-                <i class="fas fa-sort-down fa-2x"></i>
-                </div> -->
                 <footer class="blockquote-footer"><cite title="Source Title">{{quoteInput.author}}</cite></footer>
               </blockquote>
             </div>
             <div class="card-footer text-muted">
-              <p>Posted: </p>
+              <p>Posted: {{dateCreated | datePosted}}</p>
             </div>
         </div>                  
     </li>
